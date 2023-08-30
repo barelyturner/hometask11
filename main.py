@@ -137,8 +137,11 @@ class CashRegister:
         with open("file.txt", "a") as file:
             file.write(str(f'{datetime.datetime.now()}\n'))
             file.write(str(f'Current profit by item Naftizinum is {shop.item_profit1}\n'))
+            file.write(str(f'Remained amount of Naftizinum is {shop.naftizinum.in_stock}\n'))
             file.write(str(f'Current profit by item Cocainum is {shop.item_profit2}\n'))
+            file.write(str(f'Remained amount of Cocainum is {shop.cocainum.in_stock}\n'))
             file.write(str(f'Current profit by item Askorbinum is {shop.item_profit3}\n'))
+            file.write(str(f'Remained amount of Askorbinum is {shop.askorbinum.in_stock}\n'))
             file.write(str(f'Total profit: {shop.item_profit1 + shop.item_profit2 + shop.item_profit3}\n\n'))
 
     @staticmethod
